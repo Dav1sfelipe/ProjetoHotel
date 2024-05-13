@@ -1,4 +1,4 @@
-package com.projetohotel.hotel;
+package projetohotel.hotel;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

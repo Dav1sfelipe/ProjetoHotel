@@ -1,4 +1,4 @@
-package com.projetohotel.hotel;
+package projetohotel.hotel;
 
 public class Servicos {
     
