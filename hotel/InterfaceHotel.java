@@ -20,5 +20,6 @@ public interface InterfaceHotel {
     Quartos encontrarQuarto(int numeroQuarto);
 
     // funções para os serviços
-    Lista<Servicos> escolherServico();
+    public void limpezaFeita();
+    public void servicoDeQuartoFeita();
 }
