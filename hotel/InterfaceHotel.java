@@ -4,6 +4,7 @@ import java.util.List;
 
 public interface InterfaceHotel {
     // funções para o funcionario
+    public void removerFuncionario();
     public void adicionarFuncionario(Funcionarios funcionario);
     Lista<Funcionarios> listarTodosFuncionarios();
     Funcionarios encontrarFuncionarioPorId(int id_funcionario);
@@ -19,7 +20,7 @@ public interface InterfaceHotel {
     Lista<Quartos> listarTodosQuartos();
     Quartos encontrarQuarto(int numeroQuarto);
 
-    // funções para os serviços
+    // funções para os serviços PRECISAMOS VER COMO FAZER
     public void limpezaFeita();
     public void servicoDeQuartoFeita();
 }

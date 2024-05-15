@@ -4,8 +4,8 @@ public class Funcionarios implements InterfaceHotel{
         private String nome_funcionario;
         private String cargo;
         
-        public Funcionarios(String nome, String cargo){
-            this.nome = nome;
+        public Funcionarios(String nome_funcionario, String cargo){
+            this.nome_funcionario = nome;
             this.cargo = cargo;
         }
     // getters
@@ -40,13 +40,13 @@ public class Funcionarios implements InterfaceHotel{
         
         @Override
         public void incluirFuncionario(Funcionarios funcionario) {
-            String sql = "INSERT INTO cliente (nome_cliente, cpf, telefone) VALUES (?, ?, ?)";
+            String sql = "INSERT INTO funcionarios (nome_funcionario, cargo) VALUES (?, ?)";
             
             try (Connection conexao = DatabaseConnection.getConnection();
                  PreparedStatement statement = conexao.prepareStatement(sql)) {
         
-                statement.setString(1, cliente.getNome());
-                statement.setInt(2, cliente.getCargo());
+                statement.setString(1, funcionario.getNome());
+                statement.setInt(2, funcionario.getCargo());
         
                 int rowsAffected = statement.executeUpdate();
                 if (rowsAffected > 0) {
@@ -83,7 +83,7 @@ public class Funcionarios implements InterfaceHotel{
         @Override
         public  Funcionarios encontrarFuncionarioPorId(int id_funcionario) {
             Funcionarios funcionario = null;
-            String sql = "SELECT * FROM cliente WHERE id_funcionario = ?";
+            String sql = "SELECT * FROM funcionarios WHERE id_funcionario = ?";
             
             try (Connection conexao = DatabaseConnection.getConnection();
                  PreparedStatement statement = conexao.prepareStatement(sql)) {
@@ -92,7 +92,7 @@ public class Funcionarios implements InterfaceHotel{
                 ResultSet resultSet = statement.executeQuery();
                 
                 if (resultSet.next()) {
-                    cliente = new Clientes(
+                    funcionario = new Funcionarios(
                         resultSet.getString("nome_funcionario"),
                         resultSet.getInt("cargo")
                     );
@@ -104,4 +104,25 @@ public class Funcionarios implements InterfaceHotel{
             return funcionarios;
         }
     
+        @Override
+        public void removerFuncionario(Funcionarios funcionario) {
+        String sql = "DELETE FROM funcionarios WHERE id_funcionario = ? AND nome_funcionario = ? AND cargo = ?";
+        
+        try (Connection conexao = DatabaseConnection.getConnection();
+             PreparedStatement statement = conexao.prepareStatement(sql)) {
+    
+                statement.setString(1, funcionario.getNome());
+                statement.setInt(2, funcionario.getCargo());
+        
+            int rowsAffected = statement.executeUpdate();
+            if (rowsAffected > 0) {
+                System.out.println("Funcionario removido com sucesso!");
+            } else {
+                System.out.println("Falha ao remover o Funcionario ou Funcionario não encontrado.");
+            }
+        } catch (SQLException e) {
+            System.err.println("Erro ao tentar remover Funcionario: ");
+            e.printStackTrace();
+        }
+    }
 }
