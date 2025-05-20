@@ -1,0 +1,188 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border box;
+    font-family: "Poppins", sans-serif;
+}
+/*definição do site*/
+
+body {
+    background: linear-gradient(-45deg , #360779, #24034b);
+    background-size: 350% 350%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+}
+/*fundo animado do site */
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+/*fundo animado do site*/
+
+.interface{ /*definição da interface do site, distancia entre os botoes (inicio, feitos, conquistas, relacoes e contato*/
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/*Cabeçalho*/
+
+header{
+    padding: 40px 4%;
+}
+
+header .interface{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+header a{
+    color: rgb(174, 169, 169);
+    text-decoration: none;
+    display: inline-block;
+}
+
+header a :hover{ /*dar animacao parao botao contato*/
+    color: #000000;
+    transform: scale(1.20);
+    transition: .3s;
+}
+
+header nav ul{
+    list-style-type: none;
+}
+
+header nav li{ 
+    display: inline-block;
+    padding: 0 65px;
+}
+
+header .btn-contato button{ /*configuração do botao contato*/
+    padding: 30 80px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: yellow;
+    box-shadow: yellow 0px 0px 10px;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    width: 95px;
+}
+
+.menuDesktop a{
+    color: rgb(213, 208, 208);
+    text-decoration: none;
+    display: inline-block;
+}
+
+#teste a:hover { /*dar animacao para os botoes da interface*/
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    transform: scale(1.15);
+    transition: .3s;
+}
+
+
+#logoSite{ /*configuração do logo do site*/
+    height: 75px;
+    background-image: url(../img/logo.png);
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    
+}
+
+#image{ /*configuracao do tamanho da imagem do adam*/
+    background-image: url(../img/adam.png);
+    height: 550px;
+}
+
+
+p{ /*configuração do paragrafo ao lado da imagem*/
+    background-color: rgba(61, 7, 177, 0.521); /*cor de fundo no paragrafo*/
+    padding: 24px;
+    box-sizing: border-box;
+    border-radius: 16px;
+    box-shadow: 0 8px 12px rgba(125, 89, 225, 0.966);
+    color: #ffff;
+    max-width: 600px;
+    margin-top: 10%;
+    line-height: 1.5;
+    word-break: break-word;
+    white-space: normal;
+}
+
+/*configuração do paragrafo ao lado da imagem*/
+.paragra{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+
+}
+.tituloSite{ /*configuração do titulo do site*/
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.destaque{ /*configuração do destaque*/
+    color: rgb(214, 173, 26);
+    font-weight: bold;
+}
+/*estilo da interface do site*/
+
+.interface{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2%0;
+}
+
+#image{ /*animacao da imagem que ta flutuando*/
+    position: relative;
+    animation: imagem-flutuando 5s ease-in-out infinite alternate;
+}
+
+@keyframes imagem-flutuando{ /*configuracao da animacao flutuante da imagem do adam*/
+    0%{
+        top : 0;
+    }
+    100%{
+        top: 30px;
+    }
+}
+
+#pacman{
+    height: 280px;
+    position: absolute;
+    left: 66%; 
+    margin-top: 300px;
+    filter: drop-shadow(0, 15px, 10px, yellow);
+    filter: drop-shadow(0 0 60px yellow);
+    filter: drop-shadow(0 0 60px yellow);
+    animation: imagem-flutuando 5s ease-in-out infinite alternate;
+}
+
+.parceiros #imagemParceiro{
+    height: 320px;
+    
+}
+
+.parceiros #imagemLudlow{
+    height: 150px;
+    width: 100px;
+}
