@@ -177,12 +177,12 @@ p{ /*configuração do paragrafo ao lado da imagem*/
     animation: imagem-flutuando 5s ease-in-out infinite alternate;
 }
 
-.parceiros #imagemParceiro{
+.parceiros #imagemParceiro{ /*configuração das imgagens dos parceiros*/
     height: 320px;
     
 }
 
-.parceiros #imagemLudlow{
+.parceiros #imagemLudlow{ /*configuração da imagem do Ludlow*/
     height: 150px;
-    width: 100px;
+    width: 200px;
 }
