@@ -1,0 +1,248 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1d0327;
+  color: #f1f1f1;
+  line-height: 1.6;
+}
+
+
+h4{
+    align-items: center;
+    margin-top: 4%;
+    max-width: 780px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    background-color: rgba(61, 7, 177, 0.521); /*cor de fundo no paragrafo*/
+    padding: 24px;
+    box-sizing: border-box;
+    border-radius: 16px;
+    box-shadow: 0 8px 12px rgba(233, 217, 2, 0.747);
+    color: #ffff;
+}
+
+.interface{ /*definição da interface do site, distancia entre os botoes (inicio, feitos, conquistas, relacoes e contato*/
+    max-width: 1280px;
+    margin: 0 auto;
+    
+
+}
+p{ /*configuração do paragrafo ao lado da imagem*/
+    background-color: rgba(61, 7, 177, 0.521); /*cor de fundo no paragrafo*/
+    padding: 24px;
+    box-sizing: border-box;
+    border-radius: 16px;
+    box-shadow: 0 8px 12px rgba(233, 217, 2, 0.747);
+    color: #ffff;
+    max-width: 600px;
+    margin-top: 10%;
+    line-height: 1.5;
+    word-break: break-word;
+    white-space: normal;
+    align-items: center;
+}
+
+header .logo img {
+  height: 60px;
+}
+
+header .btn-contato button{ /*configuração do botao contato*/
+    font-size: 18px;
+    font-weight: 800;
+    background-color: yellow;
+    box-shadow: yellow 0px 0px 10px;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    width: 111px;
+}
+
+header{
+    padding: 40px 4%;  /*distancia do cabeçalho*/
+}
+
+header .interface{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+header a{
+    color: rgb(174, 174, 169);
+    text-decoration: none;
+    display: inline-block;
+}
+
+header a :hover{ /*dar animacao parao botao contato*/
+    color: #000000;
+    transform: scale(1.20);
+    transition: .3s;
+}
+
+header nav ul{
+    list-style-type: none;
+}
+
+header nav li{ 
+    display: inline-block;
+    padding: 0 65px;
+}
+#teste a:hover { /*dar animacao para os botoes da interface*/
+    color: yellow 0px 0px 10px;
+    border-radius: 10px;
+    transform: scale(1.15);
+    transition: .3s;
+    align-items: center;
+
+}
+
+.menuDesktop ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.menuDesktop ul li a {
+  text-decoration: none;
+  color: #f1f1f1;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.menuDesktop ul li a:hover {
+  color: #ffd700;
+}
+
+.btn-contato button {
+  background-color: #ffd700;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+main .interface {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.paragra {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+}
+
+#image {
+  width: 250px;
+  border-radius: 10px;
+}
+
+#pacman-imagem {
+
+  width: 250px;
+  margin-left: 60%;
+  position: absolute;
+  margin-top: 30px;
+  filter: drop-shadow(0 0 29px yellow);
+}
+
+.tituloSite h1 {
+  font-size: 2.5em;
+  color: #fff;
+}
+
+.tituloSite .destaque {
+    color: #ffd700;
+    width: 150px;
+    border-radius: 10px;
+    align-items: center;
+
+}
+
+.tituloSite p {
+  margin-top: 20px;
+  font-size: 1.1em;
+  color: #ccc;
+}
+
+.section h2 {
+  font-size: 2em;
+  color: #ffee00;
+  margin-bottom: 20px;
+}
+
+.cards-feitos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.feito {
+  flex: 1;
+  min-width: 250px;
+  background: #3a015f;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid #6d088b;
+}
+
+.feito img {
+  width: 48px;
+  margin-bottom: 10px;
+}
+
+.lista-conquistas {
+  padding-left: 20px;
+  line-height: 1.8;
+}
+
+.lista-conquistas li {
+  margin-bottom: 8px;
+}
+
+.parceiros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+  
+}
+
+.parceiros img {
+  width: 150px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+#contato .form-contato {
+    background: rgba(61, 7, 177, 0.521);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 18px;
+    box-shadow: 0 8px 24px rgba(233, 217, 2, 0.747);
+    padding: 35px;
+    border: 1px solid #6d088b;
+    color: #fbff00;
+    align-items: center;
+    margin-top: 4%;
+    max-width: 780px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
